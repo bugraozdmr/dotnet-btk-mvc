@@ -1,0 +1,58 @@
+@model Candidate
+
+<div class="display-6">
+    Apply
+</div>
+
+<form method="post" asp-action="Apply">
+    <!-- asp for name demek -->
+    
+    <!-- burdaki ifade tek tek span yazmayı engeller --->
+    <div class="text-danger" asp-validation-summary="All"></div>
+    
+    <div class="form-group">
+        <!-- asp for label içinde olur -->
+        <label asp-for="email"></label>
+        <input class="form-control" asp-for="email"/>
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control" asp-for="FirstName"/>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" asp-for="LastName"/>
+    </div>
+    <div class="form-group my-2">
+        <label>Age</label>
+        <select asp-for="age" class="form-control">
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+        </select>
+    </div>
+
+    <fieldset>
+        <legend>Select One Course</legend>
+        <p>
+            <input id="mvc" type="radio" asp-for="SelectedCourse" value="Asp.Net Core MVC" checked="">
+            <label>Asp.Net Core MVC</label>
+        </p>
+        <p>
+            <input id="mvc" type="radio" asp-for="SelectedCourse" value="Asp.Net Core Api">
+            <label>Asp.Net Core Api</label>
+        </p>
+        <p>
+            <input id="mvc" type="radio" asp-for="SelectedCourse" value="Next.js">
+            <label>Next.jsMVC</label>
+        </p>
+    </fieldset>
+
+
+    <button class="btn btn-primary" type="submit">Click to send</button>
+    <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Home</a>
+</form>
