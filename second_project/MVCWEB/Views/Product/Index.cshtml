@@ -10,9 +10,10 @@
         DateTime targetTime = DateTime.Now.AddMinutes(1);
     }
 
-    <div id="message-container" class="my-2">
+    <div id="message-container" class="my-2 text-center">
         Click the link that you want to go.
     </div>
+
 
     <script>
     var pageLoadTime = new Date();
@@ -41,10 +42,10 @@
     
 }
 
-@foreach (var item in @Model)
-{
-    <div>
-        <a href="/product/get/@item.Id">@item.ProductName</a>
-        <p>@item.Price.ToString("N2")</p>
-    </div>
-}
+<div class="row my-3">
+    @foreach (var item in @Model)
+    {
+        // bu iyice bilgi
+        <partial name="_ProductCard" model="@item"/>
+    }
+</div>

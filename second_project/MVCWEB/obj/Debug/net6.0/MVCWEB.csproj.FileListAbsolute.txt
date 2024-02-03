@@ -41,3 +41,4 @@
 /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/MVCWEB.pdb
 /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/MVCWEB.genruntimeconfig.cache
 /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/ref/MVCWEB.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/libman.json

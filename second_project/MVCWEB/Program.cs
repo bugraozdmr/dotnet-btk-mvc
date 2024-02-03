@@ -23,6 +23,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+// wwwroot eklendir
 app.UseStaticFiles();
 
 app.UseRouting();
