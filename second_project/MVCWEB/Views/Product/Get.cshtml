@@ -1,0 +1,10 @@
+@{
+    // artık çapırmaya gerek yok başlangıç değeri zaten _layout
+    Layout = "_Layout";
+}
+
+@model Product
+
+<h3>@Model.ProductName</h3>
+<h4>@Model.Price.ToString("N2")</h4>
+<a href="/product">products</a>

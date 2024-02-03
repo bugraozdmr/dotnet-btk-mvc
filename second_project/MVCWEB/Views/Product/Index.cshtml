@@ -1,0 +1,50 @@
+@model IEnumerable<Product>
+
+@{
+    Layout = "_Layout";
+}
+
+@section Top
+{
+    @{
+        DateTime targetTime = DateTime.Now.AddMinutes(1);
+    }
+
+    <div id="message-container" class="my-2">
+        Click the link that you want to go.
+    </div>
+
+    <script>
+    var pageLoadTime = new Date();
+    
+    // JavaScript ile belirli aralıklarla kontrol yapma
+    setInterval(function () {
+        var now = new Date();
+        
+        if (now < new Date('@targetTime.ToString("yyyy-MM-ddTHH:mm:ss")')) {
+            // Belirtilen süre içindeyiz, bir şey yapabilirsiniz.
+            document.getElementById('message-container').innerText = 'Click the link that you want to go.';
+        } else {
+            // Belirtilen süre geçti, istediğiniz başka bir şey yapabilirsiniz.
+            document.getElementById('message-container').innerText = 'Time has passed.';
+        }
+    }, 1000); // 1000 milisaniye = 1 saniye
+    
+    // Sayfa kapandığında veya tarayıcı kapandığında kontrol et
+    window.onbeforeunload = function () {
+        var elapsedTime = new Date() - pageLoadTime;
+        alert('User stayed on the page for ' + (elapsedTime / 1000) + ' seconds.');
+        // Burada başka bir işlem yapabilirsiniz.
+    };
+</script>
+
+    
+}
+
+@foreach (var item in @Model)
+{
+    <div>
+        <a href="/product/get/@item.Id">@item.ProductName</a>
+        <p>@item.Price.ToString("N2")</p>
+    </div>
+}

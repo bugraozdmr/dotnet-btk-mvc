@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Mvc")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MVCWEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Mvc")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Mvc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1432e619830c754f5dcd1e9c68448d99e0d9341f")]
+[assembly: System.Reflection.AssemblyProductAttribute("MVCWEB")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MVCWEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment sınıfı tarafından oluşturuldu.
