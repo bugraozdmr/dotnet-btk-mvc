@@ -1,0 +1,9 @@
+
+  "ConnectionStrings": {
+    "sqlConnection": "server=localhost;port=3307;Database=StoreAppDb;Uid=grant;pwd=grant345;"
+  }
+
+Port burda girilebiliyor ancakmigrations sırasında yaparsan hata alırsın orda sil...
+
+//mysql başlamazsa portu değiştir bir arttır yeter
+// sonra my.cnf'e git ordan portu hep değiştir

@@ -1,4 +1,4 @@
-namespace MVCWEB.Models;
+namespace Entities.Models;
 
 public class Product
 {

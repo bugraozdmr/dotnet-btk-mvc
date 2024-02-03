@@ -1,0 +1,16 @@
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.csproj.AssemblyReference.cache
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.AssemblyInfoInputs.cache
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.AssemblyInfo.cs
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.csproj.CoreCompileInputs.cache
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.sourcelink.json
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/bin/Debug/net6.0/Repositories.deps.json
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/bin/Debug/net6.0/Repositories.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/bin/Debug/net6.0/Repositories.pdb
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/bin/Debug/net6.0/Entities.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/bin/Debug/net6.0/Entities.pdb
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.csproj.CopyComplete
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/refint/Repositories.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/Repositories.pdb
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/Debug/net6.0/ref/Repositories.dll

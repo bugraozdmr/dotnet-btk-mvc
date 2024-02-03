@@ -1,6 +1,7 @@
 using System.Net.Mime;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
-using MVCWEB.Models;
+using Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

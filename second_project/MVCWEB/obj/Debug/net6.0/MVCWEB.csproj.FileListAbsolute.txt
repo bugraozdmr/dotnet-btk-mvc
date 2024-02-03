@@ -42,3 +42,8 @@
 /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/MVCWEB.genruntimeconfig.cache
 /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/ref/MVCWEB.dll
 /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/libman.json
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Entities.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Entities.pdb
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Repositories.dll
+/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Repositories.pdb

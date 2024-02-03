@@ -4,14 +4,14 @@
     "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {}
   },
   "projects": {
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {
+    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
-        "projectName": "MVCWEB",
-        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
+        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
         "packagesPath": "/Users/bugra/.nuget/packages/",
-        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/",
+        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bugra/.nuget/NuGet/NuGet.Config"
@@ -37,11 +37,67 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
+        "projectName": "MVCWEB",
+        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
+        "packagesPath": "/Users/bugra/.nuget/packages/",
+        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bugra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj": {
+                "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj"
+              },
+              "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
+                "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.25, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -53,10 +109,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.25, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[6.0.2, )"
             }
           },
           "imports": [
@@ -74,6 +126,81 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj",
+        "packagesPath": "/Users/bugra/.nuget/packages/",
+        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bugra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj": {
+                "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
