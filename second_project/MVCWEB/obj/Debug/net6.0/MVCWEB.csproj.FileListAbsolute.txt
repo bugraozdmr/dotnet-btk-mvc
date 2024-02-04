@@ -96,3 +96,5 @@
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/MVCWEB.pdb
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/MVCWEB.genruntimeconfig.cache
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/ref/MVCWEB.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Services.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Services.pdb

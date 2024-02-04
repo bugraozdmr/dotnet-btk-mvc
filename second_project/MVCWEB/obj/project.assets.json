@@ -540,6 +540,20 @@
         "runtime": {
           "bin/placeholder/Repositories.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -1217,6 +1231,11 @@
       "type": "project",
       "path": "../Repositories/Repositories.csproj",
       "msbuildProject": "../Repositories/Repositories.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1224,7 +1243,8 @@
       "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.25",
-      "Repositories >= 1.0.0"
+      "Repositories >= 1.0.0",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1257,6 +1277,9 @@
             },
             "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
               "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj"
+            },
+            "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Services/Services.csproj": {
+              "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Services/Services.csproj"
             }
           }
         }

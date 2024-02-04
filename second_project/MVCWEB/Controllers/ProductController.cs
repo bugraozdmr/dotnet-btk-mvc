@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
 using Repositories.Contracts;
+using Services.Concrats;
 
 namespace MVCWEB.Controllers;
 
@@ -10,9 +11,9 @@ namespace MVCWEB.Controllers;
 
 public class ProductController : Controller
 {
-    private readonly IRepositoryManager _manager;
+    private readonly IServiceManager _manager;
     
-    public ProductController(IRepositoryManager manager) // IConfiguration ekledim
+    public ProductController(IServiceManager manager) // IConfiguration ekledim
     {
         _manager = manager;
     }
@@ -21,15 +22,15 @@ public class ProductController : Controller
     // GET
     public IActionResult Index()
     {
-        var model = _manager.Product.GetAllProducts(false);
+        var model = _manager.ProductService.GetAllProducts(false);
 
         return View(model);
     }
 
     
-    public IActionResult Get(int id)
+    public IActionResult Get([FromRoute(Name = "id")]int id)
     {
-        var product = _manager.Product
+        var product = _manager.ProductService
             .GetOneProduct(id, false);
             
 
