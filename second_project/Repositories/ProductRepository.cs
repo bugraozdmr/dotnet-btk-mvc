@@ -14,4 +14,6 @@ public class ProductRepository : RepositoryBase<Product> , IProductRepository
     public Product GetOneProduct(int id, bool trackChanges) => FindByCondition(
         p => p.Id.Equals(id)
         , trackChanges);
+
+    public void CreateProduct(Product product) => Create(product);
 }

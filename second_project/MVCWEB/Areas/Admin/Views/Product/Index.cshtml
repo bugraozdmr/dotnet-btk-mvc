@@ -1,0 +1,43 @@
+@model IEnumerable<Product>
+
+<div class="text-center">
+    <div class="display-6 my-3">Products</div>
+    
+    <div class="d-flex justify-content-end my-2">
+      <a class="btn btn-outline-secondary" asp-action="Create">
+        <i class="fa fa-plus"></i>
+        Create
+      </a>
+    </div>
+    
+    
+    <table class="table table-dark my-4">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+      @if (@Model is null || @Model.Count() == 0)
+      {
+        <h5 class="text-center">No products to show</h5>
+      }
+      else
+      {
+        @foreach (var item in @Model)
+        {
+          <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.ProductName</td>
+            <td>@item.Price.ToString("C")</td>
+            <td>Delete</td>
+          </tr>
+        } 
+      }
+      </tbody>
+    </table>
+    
+</div>

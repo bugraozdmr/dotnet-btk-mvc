@@ -1,0 +1,40 @@
+@model Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="text-center">
+    <div class="display-6 my-3">Create</div>
+</div>
+
+<form method="post" asp-action="Create">
+    
+    <div class="text-danger" asp-validation-summary="All"></div>
+    
+    <div class="form-group my-3">
+        <label asp-for="ProductName"></label>
+        <input type="text" class="form-control" asp-for="ProductName" placeholder="Enter Product Name">
+    </div>
+    <div class="form-group my-3">
+        <label asp-for="Price"></label>
+        <input type="text" class="form-control" asp-for="Price" placeholder="Enter Price">
+    </div>
+
+    <!-- burda check olabilirdi ama onu kayıt almada sor -->
+
+    <div class="form-group my-3">
+        <div class="btn-group">
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-save"></i>
+                Submit
+            </button>
+
+            <a asp-action="Index" asp-controller="Product" class="btn btn-warning mx-2" style="text-decoration: none">
+                <i class="fa fa-list"></i>
+                Products
+            </a>
+        </div>
+
+    </div>
+</form>
