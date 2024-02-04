@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TO7XAX2e6QUpZRTltTKGq0JUYCQ6bPzSNI/K3U1sEUvwD1K1iUb5bMDnmQzK5CG0t/qxdUtycSKRZixe1hywXA==",
+  "dgSpecHash": "Qifz/VjMzohJ1gZDL7mbc2y/m2HnMTDlGQCKcMGnX4T0Y+9hyEm0samRS2NDZaXhcboWSV7CvqQCdNGWw3su7A==",
   "success": true,
-  "projectFilePath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
+  "projectFilePath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

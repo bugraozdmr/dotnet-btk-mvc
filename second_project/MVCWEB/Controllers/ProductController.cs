@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
+using Repositories.Contracts;
 
 namespace MVCWEB.Controllers;
 
@@ -9,18 +10,18 @@ namespace MVCWEB.Controllers;
 
 public class ProductController : Controller
 {
-    private readonly RepositoryContext _context;
-
-    public ProductController(RepositoryContext context) // IConfiguration ekledim
+    private readonly IRepositoryManager _manager;
+    
+    public ProductController(IRepositoryManager manager) // IConfiguration ekledim
     {
-        _context = context;
+        _manager = manager;
     }
 
     
     // GET
     public IActionResult Index()
     {
-        var model = _context.Products;
+        var model = _manager.Product.GetAllProducts(false);
 
         return View(model);
     }
@@ -28,7 +29,9 @@ public class ProductController : Controller
     
     public IActionResult Get(int id)
     {
-        var product = _context.Products.FirstOrDefault(p => p.Id.Equals(id));
+        var product = _manager.Product
+            .GetOneProduct(id, false);
+            
 
         return View(product);
     }

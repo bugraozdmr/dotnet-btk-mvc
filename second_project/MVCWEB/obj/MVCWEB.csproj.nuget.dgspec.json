@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {}
+    "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {}
   },
   "projects": {
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj": {
+    "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
+        "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj",
         "packagesPath": "/Users/bugra/.nuget/packages/",
-        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/obj/",
+        "outputPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bugra/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {
+    "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
+        "projectUniqueName": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
         "projectName": "MVCWEB",
-        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
+        "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
         "packagesPath": "/Users/bugra/.nuget/packages/",
-        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/obj/",
+        "outputPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bugra/.nuget/NuGet/NuGet.Config"
@@ -79,11 +79,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj": {
-                "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj"
+              "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj": {
+                "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj"
               },
-              "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
-                "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj"
+              "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
+                "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj"
               }
             }
           }
@@ -134,14 +134,14 @@
         }
       }
     },
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
+    "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj",
+        "projectUniqueName": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj",
+        "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj",
         "packagesPath": "/Users/bugra/.nuget/packages/",
-        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/obj/",
+        "outputPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bugra/.nuget/NuGet/NuGet.Config"
@@ -156,8 +156,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj": {
-                "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj"
+              "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj": {
+                "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj"
               }
             }
           }

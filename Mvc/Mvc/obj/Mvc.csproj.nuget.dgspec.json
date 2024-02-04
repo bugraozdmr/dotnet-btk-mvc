@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/Mvc/Mvc/Mvc.csproj": {}
+    "/Users/bugra/Desktop/dotnet-btk-mvc-first/Mvc/Mvc/Mvc.csproj": {}
   },
   "projects": {
-    "/Users/bugra/Desktop/dotnek-btk-mvc-first/Mvc/Mvc/Mvc.csproj": {
+    "/Users/bugra/Desktop/dotnet-btk-mvc-first/Mvc/Mvc/Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/Mvc/Mvc/Mvc.csproj",
+        "projectUniqueName": "/Users/bugra/Desktop/dotnet-btk-mvc-first/Mvc/Mvc/Mvc.csproj",
         "projectName": "Mvc",
-        "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/Mvc/Mvc/Mvc.csproj",
+        "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/Mvc/Mvc/Mvc.csproj",
         "packagesPath": "/Users/bugra/.nuget/packages/",
-        "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/Mvc/Mvc/obj/",
+        "outputPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/Mvc/Mvc/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bugra/.nuget/NuGet/NuGet.Config"

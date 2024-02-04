@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HzP7GK033bEyU21rAeYRRFDFu9I/63xS7fFl6u5HFrMqFRfO9PnMfvrCOe+12z/kTS4v+P60GrkZpmVaQCwv5A==",
+  "dgSpecHash": "/0/y7GgG1M0ncf9yG5SdxO3rDV++WvbhYbHIB4JRDJ7nWu+cwNnJCwd+zITl/wVZnFzSxIGnWD6t6+cwvULqQQ==",
   "success": true,
-  "projectFilePath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
+  "projectFilePath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/MVCWEB.csproj",
   "expectedPackageFiles": [
     "/Users/bugra/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore/6.0.25/microsoft.entityframeworkcore.6.0.25.nupkg.sha512",

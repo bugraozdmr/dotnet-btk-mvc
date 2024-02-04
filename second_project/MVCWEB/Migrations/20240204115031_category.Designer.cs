@@ -10,8 +10,8 @@ using Repositories;
 namespace MVCWEB.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240203205829_first")]
-    partial class first
+    [Migration("20240204115031_category")]
+    partial class category
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,32 @@ namespace MVCWEB.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("Entities.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            CategoryName = "Computer Parts"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            CategoryName = "Books"
+                        });
+                });
 
             modelBuilder.Entity("Entities.Models.Product", b =>
                 {

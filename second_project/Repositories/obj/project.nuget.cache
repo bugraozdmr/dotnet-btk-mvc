@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LUAMoWOqzsCY5pIKhG4Pbl35X4RdXCI8YELE27csEf+COTRzva2f0L0loc2moAUwZTb7oDVip1p+Fn320UglWQ==",
+  "dgSpecHash": "4qolXb4oFksjvCAHKz+RZeRpmyKm14R60qddBAhOyzd4IwHqYuJOtkJVrLMJAsCtrE3852XJl/meylniXcOUyw==",
   "success": true,
-  "projectFilePath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Repositories/Repositories.csproj",
+  "projectFilePath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Repositories/Repositories.csproj",
   "expectedPackageFiles": [
     "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore/6.0.25/microsoft.entityframeworkcore.6.0.25.nupkg.sha512",
     "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.25/microsoft.entityframeworkcore.abstractions.6.0.25.nupkg.sha512",

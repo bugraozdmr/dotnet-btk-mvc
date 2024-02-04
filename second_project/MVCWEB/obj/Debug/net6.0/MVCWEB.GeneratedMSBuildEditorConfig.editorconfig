@@ -9,59 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVCWEB
 build_property.RootNamespace = MVCWEB
-build_property.ProjectDir = /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/
+build_property.ProjectDir = /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB
+build_property.MSBuildProjectDirectory = /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Error/Index.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Error/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Home/Index.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Home/Privacy.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Product/Get.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Product/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9HZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Product/Index.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Product/_ProductCard.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Product/_ProductCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9fUHJvZHVjdENhcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Shared/Error.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Shared/_Navbar.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/_ViewImports.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/_ViewStart.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/MVCWEB/Views/Shared/_Layout.cshtml]
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8t619uqy3o

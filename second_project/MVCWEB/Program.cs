@@ -2,11 +2,18 @@ using System.Net.Mime;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
+using Repositories.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// her kullanıcı için ayrı bir nesne üretecekf
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
 
 var connectionString = builder.Configuration.GetConnectionString("sqlConnection");
 

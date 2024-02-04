@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
+      "projectUniqueName": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/Entities.csproj",
+      "projectPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj",
       "packagesPath": "/Users/bugra/.nuget/packages/",
-      "outputPath": "/Users/bugra/Desktop/dotnek-btk-mvc-first/second_project/Entities/obj/",
+      "outputPath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bugra/.nuget/NuGet/NuGet.Config"
