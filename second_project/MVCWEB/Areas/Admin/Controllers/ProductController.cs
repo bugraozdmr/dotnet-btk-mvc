@@ -1,5 +1,7 @@
+using Entities.Dtos;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Services.Concrats;
 
 namespace MVCWEB.Areas.Admin.Controllers;
@@ -21,27 +23,37 @@ public class ProductController : Controller
 
     public IActionResult Create()
     {
+        // select list
+        ViewBag.Categories = getCategoriesSelectList();
         return View();
+    }
+
+    private SelectList getCategoriesSelectList()
+    {
+        return new SelectList(_manager.CategoryService.GetAllCategories(false)
+            , "CategoryId", "CategoryName", "1");
     }
     
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Create([FromForm]Product product)
+    public IActionResult Create([FromForm]ProductDtoForInsertion productDto)
     {
 
         if (ModelState.IsValid)
         {
-            _manager.ProductService.CreateProduct(product);
+            _manager.ProductService.CreateProduct(productDto);
         
             return RedirectToAction("Index");    
         }
 
-        return View(product);
+        return View(productDto);
     }
 
     public IActionResult Update([FromRoute(Name = "id")]int id)
     {
-        var model = _manager.ProductService.GetOneProduct(id, false);
+        ViewBag.Categories = getCategoriesSelectList();
+        
+        var model = _manager.ProductService.GetOneProductForUpdate(id, false);
         
         return View(model);
     }
@@ -49,7 +61,7 @@ public class ProductController : Controller
     
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Update(Product product)
+    public IActionResult Update([FromForm]ProductDtoForUpdate product)
     {
         if (ModelState.IsValid)
         {

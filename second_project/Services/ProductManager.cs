@@ -1,3 +1,5 @@
+using AutoMapper;
+using Entities.Dtos;
 using Entities.Models;
 using Repositories.Contracts;
 using Services.Concrats;
@@ -7,10 +9,12 @@ namespace Services;
 public class ProductManager : IProductService
 {
     private readonly IRepositoryManager _manager;
-
-    public ProductManager(IRepositoryManager manager)
+    private readonly IMapper _mapper;
+    
+    public ProductManager(IRepositoryManager manager, IMapper mapper)
     {
         _manager = manager;
+        _mapper = mapper;
     }
 
     public IEnumerable<Product> GetAllProducts(bool trackChanges)
@@ -30,17 +34,24 @@ public class ProductManager : IProductService
         return product;
     }
 
-    public void CreateProduct(Product product)
+    public void CreateProduct(ProductDtoForInsertion product)
     {
-        _manager.Product.CreateProduct(product);
+        Product productToGo = _mapper.Map<Product>(product); 
+        
+        _manager.Product.CreateProduct(productToGo);
         _manager.Save();
     }
 
-    public void UpdateProduct(Product product)
+    public void UpdateProduct(ProductDtoForUpdate product)
     {
-        var entity = _manager.Product.GetOneProduct(product.Id, true);
-        entity.ProductName = product.ProductName;
-        entity.Price = product.Price;
+        // var entity = _manager.Product.GetOneProduct(product.Id, true);
+        
+        // entity.ProductName = product.ProductName;
+        // entity.Price = product.Price;
+        // entity.categoryId = product.categoryId;
+
+        var entity = _mapper.Map<Product>(product);
+        _manager.Product.UpdateProduct(entity);
         
         _manager.Save();
     }
@@ -54,5 +65,12 @@ public class ProductManager : IProductService
             _manager.Product.deleteProduct(product);
             _manager.Save();
         }
+    }
+
+    public ProductDtoForUpdate GetOneProductForUpdate(int id, bool trackChanges)
+    {
+        var product = GetOneProduct(id, trackChanges);
+        var productDto = _mapper.Map<ProductDtoForUpdate>(product);
+        return productDto;
     }
 }

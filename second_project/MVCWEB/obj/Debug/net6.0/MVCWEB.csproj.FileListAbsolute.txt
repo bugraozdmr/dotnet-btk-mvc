@@ -99,3 +99,5 @@
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Services.dll
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Services.pdb
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/obj/Debug/net6.0/scopedcss/Areas/Admin/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/AutoMapper.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

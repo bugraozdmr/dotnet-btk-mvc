@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9OC8cibQDh+E3G6XHn/0nhMsxFGlr2G9TIcHZSgrXtarFdpuNMPFanyoHz0P/YcTxvREkeOzGxMLxTEJX8MDgQ==",
+  "dgSpecHash": "UmdMseIjjPHt8Op1LLctKRc+4OEdo1LQdyRsrLPtTBMDO/jHsFDhF42K2NGnbnzsFQKdgn8Ar2Fnu9TAMiz0AQ==",
   "success": true,
   "projectFilePath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Services/Services.csproj",
   "expectedPackageFiles": [
+    "/Users/bugra/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore/6.0.25/microsoft.entityframeworkcore.6.0.25.nupkg.sha512",
     "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.25/microsoft.entityframeworkcore.abstractions.6.0.25.nupkg.sha512",
     "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.25/microsoft.entityframeworkcore.analyzers.6.0.25.nupkg.sha512",

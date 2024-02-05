@@ -9,4 +9,5 @@ public interface IProductRepository : IRepositoryBase<Product>
     void CreateProduct(Product product);
 
     void deleteProduct(Product product);
+    void UpdateProduct(Product product);
 }

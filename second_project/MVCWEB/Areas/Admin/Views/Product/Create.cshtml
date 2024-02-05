@@ -1,4 +1,4 @@
-@model Product
+@model ProductDtoForInsertion
 
 @{
     ViewData["Title"] = "Create";
@@ -11,6 +11,19 @@
 <form method="post" asp-action="Create">
     
     <div class="text-danger" asp-validation-summary="All"></div>
+    
+    <div class="form-group my-3">
+        <label class="my-2" asp-for="categoryId"></label>
+        @*<select class="form-control" asp-for="categoryId">
+            @#1#foreach (var cat in ViewBag.Categories)
+            {
+                <option value="@cat.CategoryId">@cat.CategoryName</option>
+            }#1#
+        </select>*@
+        
+        <select class="form-control my-3"
+                asp-items="@ViewBag.Categories" asp-for="categoryId"></select>
+    </div>
     
     <div class="form-group my-3">
         <label asp-for="ProductName"></label>
