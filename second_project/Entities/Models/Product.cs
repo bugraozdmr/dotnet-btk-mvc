@@ -9,4 +9,7 @@ public class Product
     public string? ProductName { get; set; }
     [Required(ErrorMessage = "Price required")]
     public decimal Price { get; set; }
+
+    public int? categoryId { get; set; }        // foreign key
+    public Category? Category { get; set; }     // navigation property
 }
