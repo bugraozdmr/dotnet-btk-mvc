@@ -1,10 +1,22 @@
 @{
-    // artık çapırmaya gerek yok başlangıç değeri zaten _layout
+    // artık çagırmaya gerek yok başlangıç değeri zaten _layout
     Layout = "_Layout";
 }
 
 @model Product
 
-<h3>@Model.ProductName</h3>
-<h4>@Model.Price.ToString("N2")</h4>
-<a class="btn btn-outline-dark" href="/product">products</a>
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h6 class="display-6">@Model.ProductName</h6>
+        </div>
+        <img class="img-fluid shadow rounded-3 my-3" src="@Model.ImageUrl" alt="@Model.ProductName" width="100%" height="auto"/>
+        <div class="text-center">
+            <h4 class="lead text-warning">@Model.Price.ToString("C")</h4>
+            <br/>
+            <a class="btn btn-outline-dark" href="/product">products</a>
+        </div>
+        
+        
+    </div>
+</div>

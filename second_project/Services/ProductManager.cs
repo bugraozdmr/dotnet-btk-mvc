@@ -36,7 +36,7 @@ public class ProductManager : IProductService
 
     public void CreateProduct(ProductDtoForInsertion product)
     {
-        Product productToGo = _mapper.Map<Product>(product); 
+        var productToGo = _mapper.Map<Product>(product); 
         
         _manager.Product.CreateProduct(productToGo);
         _manager.Save();

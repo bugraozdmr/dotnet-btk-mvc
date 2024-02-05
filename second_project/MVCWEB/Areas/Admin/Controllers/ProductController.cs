@@ -36,16 +36,31 @@ public class ProductController : Controller
     
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Create([FromForm]ProductDtoForInsertion productDto)
+    public async Task<IActionResult> Create([FromForm]ProductDtoForInsertion productDto , IFormFile file)
     {
-
+        if (file is not null)
+        {
+            // file operation
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
+        
+            // garbage collector hemen çalışsın bitsin
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+        }
+        
+        
         if (ModelState.IsValid)
         {
+            productDto.ImageUrl = String.Concat("/images/", file.FileName);
+            
             _manager.ProductService.CreateProduct(productDto);
         
             return RedirectToAction("Index");    
         }
-
+        
+        
         return View(productDto);
     }
 
@@ -58,19 +73,29 @@ public class ProductController : Controller
         return View(model);
     }
     
-    
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Update([FromForm]ProductDtoForUpdate product)
+    public async Task<IActionResult> Update([FromForm]ProductDtoForUpdate productDto,IFormFile file)
     {
         if (ModelState.IsValid)
         {
-            _manager.ProductService.UpdateProduct(product);
+            // file operation
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
+        
+            // garbage collector hemen çalışsın bitsin
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+            
+            productDto.ImageUrl = String.Concat("/images/", file.FileName);    
+            
+            _manager.ProductService.UpdateProduct(productDto);
         
             return RedirectToAction("Index","Product");    
         }
 
-        return View(product);
+        return View(productDto);
     }
 
     [HttpGet]

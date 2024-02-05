@@ -35,6 +35,10 @@ namespace MVCWEB.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ProductName = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    Summary = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ImageUrl = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Price = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     categoryId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -61,13 +65,13 @@ namespace MVCWEB.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Price", "ProductName", "categoryId" },
+                columns: new[] { "Id", "ImageUrl", "Price", "ProductName", "Summary", "categoryId" },
                 values: new object[,]
                 {
-                    { 1, 12000m, "Computer", 1 },
-                    { 2, 1000m, "Keyboard", 1 },
-                    { 3, 2000m, "Mouse", 1 },
-                    { 4, 4000m, "Monitor", 1 }
+                    { 1, "/images/2.jpg", 12000m, "Computer", "", 1 },
+                    { 2, "/images/2.jpg", 1000m, "Keyboard", "", 1 },
+                    { 3, "/images/3.jpg", 2000m, "Mouse", "", 1 },
+                    { 4, "/images/4.jpg", 4000m, "Monitor", "", 1 }
                 });
 
             migrationBuilder.CreateIndex(

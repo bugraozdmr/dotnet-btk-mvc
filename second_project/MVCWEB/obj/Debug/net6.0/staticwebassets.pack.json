@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/1.jpg",
+      "PackagePath": "staticwebassets/images/1.jpg"
+    },
+    {
+      "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/2.jpg",
+      "PackagePath": "staticwebassets/images/2.jpg"
+    },
+    {
+      "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/3.jpg",
+      "PackagePath": "staticwebassets/images/3.jpg"
+    },
+    {
+      "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/4.jpg",
+      "PackagePath": "staticwebassets/images/4.jpg"
+    },
+    {
+      "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/sagomi.png",
+      "PackagePath": "staticwebassets/images/sagomi.png"
+    },
+    {
       "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

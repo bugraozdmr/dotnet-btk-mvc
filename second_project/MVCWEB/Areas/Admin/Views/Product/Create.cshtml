@@ -8,7 +8,8 @@
     <div class="display-6 my-3">Create</div>
 </div>
 
-<form method="post" asp-action="Create">
+<!-- ikili verilerde gidecek diyor -->
+<form method="post" asp-action="Create" enctype="multipart/form-data">
     
     <div class="text-danger" asp-validation-summary="All"></div>
     
@@ -32,6 +33,17 @@
     <div class="form-group my-3">
         <label asp-for="Price"></label>
         <input type="text" class="form-control" asp-for="Price" placeholder="Enter Price">
+    </div>
+    
+    <div class="form-group my-3">
+        <!-- summary açıklama yeri -->
+        <label asp-for="Summary"></label>
+        <input type="text" class="form-control" asp-for="Summary">
+    </div>
+    
+    <div class="form-group my-3">
+        <label asp-for="ImageUrl"></label>
+        <input type="file" class="form-control" name="file" >
     </div>
 
     <!-- burda check olabilirdi ama onu kayıt almada sor -->

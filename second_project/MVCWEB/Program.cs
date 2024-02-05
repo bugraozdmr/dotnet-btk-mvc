@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 // her kullanıcı için ayrı bir nesne üretecekf
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
@@ -57,8 +58,9 @@ app.UseEndpoints(endpoints =>
         pattern:"Admin/{controller=Dashboard}/{action=Index}/{id?}"
     );
     
-    endpoints.MapControllerRoute("default","{controller=Home}/{action=Index}/{id?}"
-    );
+    endpoints.MapControllerRoute("default","{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapRazorPages();
 });
 
 

@@ -11,7 +11,7 @@ using Repositories;
 namespace MVCWEB.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240205110945_first")]
+    [Migration("20240205165113_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,11 +54,17 @@ namespace MVCWEB.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("longtext");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Summary")
                         .HasColumnType("longtext");
 
                     b.Property<int?>("categoryId")
@@ -74,29 +80,37 @@ namespace MVCWEB.Migrations
                         new
                         {
                             Id = 1,
+                            ImageUrl = "/images/2.jpg",
                             Price = 12000m,
                             ProductName = "Computer",
+                            Summary = "",
                             categoryId = 1
                         },
                         new
                         {
                             Id = 2,
+                            ImageUrl = "/images/2.jpg",
                             Price = 1000m,
                             ProductName = "Keyboard",
+                            Summary = "",
                             categoryId = 1
                         },
                         new
                         {
                             Id = 3,
+                            ImageUrl = "/images/3.jpg",
                             Price = 2000m,
                             ProductName = "Mouse",
+                            Summary = "",
                             categoryId = 1
                         },
                         new
                         {
                             Id = 4,
+                            ImageUrl = "/images/4.jpg",
                             Price = 4000m,
                             ProductName = "Monitor",
+                            Summary = "",
                             categoryId = 1
                         });
                 });
