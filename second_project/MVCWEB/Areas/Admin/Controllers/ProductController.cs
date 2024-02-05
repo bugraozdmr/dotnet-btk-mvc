@@ -38,4 +38,34 @@ public class ProductController : Controller
 
         return View(product);
     }
+
+    public IActionResult Update([FromRoute(Name = "id")]int id)
+    {
+        var model = _manager.ProductService.GetOneProduct(id, false);
+        
+        return View(model);
+    }
+    
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Update(Product product)
+    {
+        if (ModelState.IsValid)
+        {
+            _manager.ProductService.UpdateProduct(product);
+        
+            return RedirectToAction("Index","Product");    
+        }
+
+        return View(product);
+    }
+
+    [HttpGet]
+    public IActionResult Delete([FromRoute(Name = "id")]int id)
+    {
+        _manager.ProductService.DeleteProduct(id);
+        return RedirectToAction("Index");
+    }
+    
 }

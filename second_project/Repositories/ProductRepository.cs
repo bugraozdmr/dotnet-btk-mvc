@@ -16,4 +16,5 @@ public class ProductRepository : RepositoryBase<Product> , IProductRepository
         , trackChanges);
 
     public void CreateProduct(Product product) => Create(product);
+    public void deleteProduct(Product product) => Remove(product);
 }

@@ -33,7 +33,19 @@
             <th scope="row">@item.Id</th>
             <td>@item.ProductName</td>
             <td>@item.Price.ToString("C")</td>
-            <td>Delete</td>
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-outline-primary mx-2" asp-action="Update" asp-route-id="@item.Id">
+                  <i class="fa fa-edit"></i>
+                  Update
+                </a>
+                <a class="btn btn-outline-info mx-2" asp-action="Get" asp-area=""
+                   asp-controller="Product" asp-route-id="@item.Id">
+                  <i class="fa fa-search"></i>
+                  Search
+                </a>
+              </div>
+            </td>
           </tr>
         } 
       }

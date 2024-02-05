@@ -35,4 +35,24 @@ public class ProductManager : IProductService
         _manager.Product.CreateProduct(product);
         _manager.Save();
     }
+
+    public void UpdateProduct(Product product)
+    {
+        var entity = _manager.Product.GetOneProduct(product.Id, true);
+        entity.ProductName = product.ProductName;
+        entity.Price = product.Price;
+        
+        _manager.Save();
+    }
+
+    public void DeleteProduct(int id)
+    {
+        var product = GetOneProduct(id, false);
+
+        if (product is not null)
+        {
+            _manager.Product.deleteProduct(product);
+            _manager.Save();
+        }
+    }
 }
