@@ -1,6 +1,7 @@
 using System.Net.Mime;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using MVCWEB.Models;
 using Repositories;
 using Repositories.Contracts;
 using Services;
@@ -11,6 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+// oturum yönetimi
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "StoreApp.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(10);
+});
+
+builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 
 // her kullanıcı için ayrı bir nesne üretecekf
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
@@ -20,9 +30,11 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderManager>();
 
-// bir tane eleman için servis kaydı üretildi
-builder.Services.AddSingleton<Cart>();
+// gelen elemanı al diyor -- sessiondan
+builder.Services.AddScoped<Cart>(c => SessionCart.GetCart(c));
 
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -48,6 +60,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 // wwwroot eklendir
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 

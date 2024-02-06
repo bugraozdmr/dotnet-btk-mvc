@@ -1,6 +1,7 @@
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MVCWEB.Infrastructe.Extensions;
 using Services.Concrats;
 
 namespace MVCWEB.Pages;
@@ -10,7 +11,7 @@ public class CartModel : PageModel
     private readonly IServiceManager _manager;
     public Cart Cart { get; set; }  // IoC
 
-    public string returnUrl { get; set; } = "/";
+    public string ReturnUrl { get; set; } = "/";
     
     public CartModel(IServiceManager manager, Cart cart)
     {
@@ -20,14 +21,16 @@ public class CartModel : PageModel
     
 
     // Kullanılan parametreler ve Modeldeki isimler aynı olmak zorunda !!!!! "Pages" 
+    // prop için demiyorum prop farklı isimde olabilir ... kullanılan localler aynı olacak ama
     
-    public void OnGet(string ReturnUrl)
+    public void OnGet(string returnUrl)
     {
         // geldiği yere gitsin isteniyor -- boşsa ana sayfaya gider
         ReturnUrl = returnUrl ?? "/";
+        //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
     }
 
-    public IActionResult OnPost(int Id,string ReturnUrl)
+    public IActionResult OnPost(int Id,string returnUrl)
     {
         Product? product = _manager
             .ProductService
@@ -35,18 +38,25 @@ public class CartModel : PageModel
 
         if (product is not null)
         {
+            // posttan önce yine kontrol etsin
+            // Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart(); -- artık session cart çalışıyor
+            // artık session carta gidiyor
             Cart.AddItem(product,1);
+            // HttpContext.Session.SetJson<Cart>("cart",Cart);
         }
 
-        return Page();
+        return RedirectToPage(new { returnUrl = returnUrl});
     }
 
     
     // handler remove
-    public IActionResult OnPostRemove(int Id, string ReturnUrl)
+    public IActionResult OnPostRemove(int Id, string returnUrl)
     {
-        Cart.RemoveLine(Cart.Lines.First(cl => cl.Product.Id.Equals(Id)).Product);
+        // işlem sonrası session'a sürekli tekrar yazılır
         
+        //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+        Cart.RemoveLine(Cart.Lines.First(cl => cl.Product.Id.Equals(Id)).Product);
+        //HttpContext.Session.SetJson<Cart>("cart",Cart);
         return Page();
     }
 }

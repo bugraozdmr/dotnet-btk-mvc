@@ -28,7 +28,7 @@
                     <!--- OnPostRemove olduğu için remove olur ... handler --->
                     <form method="post" asp-page-handler="Remove">
                         <input type="hidden" name="id" value="@item.Product.Id"/>
-                        <input type="hidden" name="returnUrl" value="@Model.returnUrl"/>
+                        <input type="hidden" name="returnUrl" value="@Model?.ReturnUrl"/>
                         <button type="submit" class="btn btn-sm btn-danger">
                             <i class="fa fa-remove"></i>
                         </button>
@@ -46,4 +46,9 @@
         </tr>
         </tfoot>
     </table>
+    <div class="text-center my-3">
+        <div class="btn-group">
+            <a class="btn btn-primary" href="@Model?.ReturnUrl">Continue Shopping</a>
+        </div>
+    </div>
 </div>
