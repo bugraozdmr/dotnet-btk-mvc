@@ -21,6 +21,9 @@ builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 
+// bir tane eleman için servis kaydı üretildi
+builder.Services.AddSingleton<Cart>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 var connectionString = builder.Configuration.GetConnectionString("sqlConnection");

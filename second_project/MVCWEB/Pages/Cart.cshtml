@@ -1,3 +1,49 @@
 @page "/cart"
 @model CartModel
 
+
+<div>
+    <div class="text-center display-6">
+        Cart(@Model.Cart.Lines.Count())
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Sub Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- eğer null gelirse sorun olmasın diye empty --->
+        @foreach (var item in Model.Cart?.Lines ?? Enumerable.Empty<CartLine>())
+        {
+            <tr>
+                <td>@item.Product.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@item.Product.Price.ToString("C")</td>
+                <td>@((item.Product.Price * item.Quantity).ToString("C2"))</td>
+                <td>
+                    <!--- OnPostRemove olduğu için remove olur ... handler --->
+                    <form method="post" asp-page-handler="Remove">
+                        <input type="hidden" name="id" value="@item.Product.Id"/>
+                        <input type="hidden" name="returnUrl" value="@Model.returnUrl"/>
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4" class="text-right">Total:</td>
+            <td class="text-right text-warning">
+                @Model.Cart?.ComputeTotalValue().ToString("C2")
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
