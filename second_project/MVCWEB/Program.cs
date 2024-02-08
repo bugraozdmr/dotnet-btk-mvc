@@ -1,47 +1,25 @@
-using System.Net.Mime;
-using Entities.Models;
-using Microsoft.EntityFrameworkCore;
-using MVCWEB.Models;
-using Repositories;
-using Repositories.Contracts;
-using Services;
-using Services.Concrats;
+
+using MVCWEB.Infrastructe.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-// oturum yönetimi
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(options =>
-{
-    options.Cookie.Name = "StoreApp.Session";
-    options.IdleTimeout = TimeSpan.FromMinutes(10);
-});
 
-builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 
-// her kullanıcı için ayrı bir nesne üretecekf
-builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+// extensionsdan geldi
+builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureSession();
 
-builder.Services.AddScoped<IServiceManager, ServiceManager>();
-builder.Services.AddScoped<ICategoryService, CategoryManager>();
-builder.Services.AddScoped<IProductService, ProductManager>();
-builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-builder.Services.AddScoped<IOrderService, OrderManager>();
 
-// gelen elemanı al diyor -- sessiondan
-builder.Services.AddScoped<Cart>(c => SessionCart.GetCart(c));
+builder.Services.ConfigureRepositoryRegistration();
+builder.Services.ConfigureServiceRegistration();
+
+builder.Services.ConfigureRouting();
 
 builder.Services.AddAutoMapper(typeof(Program));
-
-var connectionString = builder.Configuration.GetConnectionString("sqlConnection");
-
-builder.Services.AddDbContextPool<RepositoryContext>(opt =>
-    opt.UseMySql(connectionString, new MySqlServerVersion(new Version(10, 4, 28))));
 
 
 var app = builder.Build();
@@ -49,12 +27,13 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    // dinamik alır {0} ile
+    // dinamik alır {0} ile -- extensionsın altında bu bunu taşı diğer klosor altındaki yere öyle dene sonra
     app.UseStatusCodePagesWithRedirects("/Error/{0}");
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 
 app.UseHttpsRedirection();
@@ -79,5 +58,8 @@ app.UseEndpoints(endpoints =>
     endpoints.MapRazorPages();
 });
 
+
+app.ConfigureAndCheckMigration();
+app.ConfigureLocalization();
 
 app.Run();

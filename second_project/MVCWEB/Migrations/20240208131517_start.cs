@@ -67,7 +67,8 @@ namespace MVCWEB.Migrations
                     ImageUrl = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Price = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    categoryId = table.Column<int>(type: "int", nullable: true)
+                    categoryId = table.Column<int>(type: "int", nullable: true),
+                    Showcase = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -119,13 +120,15 @@ namespace MVCWEB.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "ImageUrl", "Price", "ProductName", "Summary", "categoryId" },
+                columns: new[] { "Id", "ImageUrl", "Price", "ProductName", "Showcase", "Summary", "categoryId" },
                 values: new object[,]
                 {
-                    { 1, "/images/2.jpg", 12000m, "Computer", "", 1 },
-                    { 2, "/images/2.jpg", 1000m, "Keyboard", "", 1 },
-                    { 3, "/images/3.jpg", 2000m, "Mouse", "", 1 },
-                    { 4, "/images/4.jpg", 4000m, "Monitor", "", 1 }
+                    { 1, "/images/2.jpg", 12000m, "Computer", false, "", 1 },
+                    { 2, "/images/2.jpg", 1000m, "Keyboard", false, "", 1 },
+                    { 3, "/images/3.jpg", 2000m, "Mouse", false, "", 1 },
+                    { 4, "/images/4.jpg", 4000m, "Monitor", false, "", 1 },
+                    { 5, "/images/1.jpg", 15000m, "Phone", true, "", 2 },
+                    { 6, "/images/1.jpg", 40000m, "Macbook", true, "", 2 }
                 });
 
             migrationBuilder.CreateIndex(

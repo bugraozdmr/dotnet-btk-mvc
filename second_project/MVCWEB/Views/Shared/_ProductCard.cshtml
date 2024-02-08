@@ -1,0 +1,37 @@
+@model Product
+@{
+    //using MVCWEB.Infrastructe.Extensions
+}
+<!--- viewimportsda tanımlarsan buraya gerek kalmaz --->
+<div class="col-sm-12 col-md-4 my-2">
+    <div class="card" style="width: 18rem;">
+        <div class="text-center">
+            <h5 class="card-header text-center">
+                @Model.ProductName
+            </h5>
+        </div>
+        <img class="card-img-top" src="@Model?.ImageUrl" alt="@Model.ProductName" width="200" height="200">
+        <div class="card-body">
+            <p class="card-text">@Model.Summary</p>
+            <p class="card-text text-center">@Model.Price.ToString("C")</p>
+
+            <div class="d-flex justify-content-center">
+                <div class="btn-group">
+                    <a class="btn btn-outline-dark rounded-2 mx-2" asp-controller="Product" asp-action="Get" asp-route-id="@Model.Id">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <form id="@Model.Id" asp-page="/Cart" method="post">
+                        <!-- Kullanılan parametreler ve Modeldeki isimler aynı olmak zorunda !!!!! "Pages" -->
+                        <input type="hidden" asp-for="Id"/>
+                        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+                        <button type="submit" class="btn btn-outline-dark rounded-2">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

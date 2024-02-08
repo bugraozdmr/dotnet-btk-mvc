@@ -1,3 +1,5 @@
+using Entities.Models;
+using Entities.RequestParameters;
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
 using Repositories.Contracts;
@@ -20,9 +22,10 @@ public class ProductController : Controller
 
     
     // GET
-    public IActionResult Index()
+    public IActionResult Index(ProductRequestParameters p)
     {
-        var model = _manager.ProductService.GetAllProducts(false);
+        // p değerini otomatik tanıdı productreqparameters'da geçiyor diyo -- bizde routing olarak verdik CategoryId diye zaten
+        var model = _manager.ProductService.GetAllProductsWithDetails(p);
 
         return View(model);
     }

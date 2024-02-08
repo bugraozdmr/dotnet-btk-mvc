@@ -8,14 +8,25 @@
 <div class="row">
     <div class="col-md-3">
         @await Component.InvokeAsync("CategoriesMenu")
+        @await Component.InvokeAsync("ProductFilterMenu")
     </div>
     <div class="col-md-9">
         <div class="row my-3">
-            @foreach (var item in @Model)
+            @if (!Model.Count().Equals(0))
             {
-                // bu iyice bilgi
-                <partial name="_ProductCard" model="@item"/>
+                @foreach (var item in @Model)
+                {
+                    // bu iyice bilgi
+                    <partial name="_ProductCard" model="@item"/>
+                }
             }
+            else
+            {
+                <div class="text-warning text-center">
+                    <h6 class="display-6">There is no product to show.</h6>
+                </div>
+            }
+            
         </div>
     </div>
 </div>
@@ -27,7 +38,7 @@
     }
 
     <div id="message-container" class="my-2 text-center">
-        Click the link that you want to go.
+        New Products Are On Their Way.
     </div>
 
 
@@ -40,7 +51,7 @@
         
         if (now < new Date('@targetTime.ToString("yyyy-MM-ddTHH:mm:ss")')) {
             // Belirtilen süre içindeyiz, bir şey yapabilirsiniz.
-            document.getElementById('message-container').innerText = 'Click the link that you want to go.';
+            document.getElementById('message-container').innerText = 'New Products Are On Their Way.';
         } else {
             // Belirtilen süre geçti, istediğiniz başka bir şey yapabilirsiniz.
             document.getElementById('message-container').innerText = 'Time has passed.';

@@ -123,6 +123,9 @@ namespace MVCWEB.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<bool>("Showcase")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("Summary")
                         .HasColumnType("longtext");
 
@@ -142,6 +145,7 @@ namespace MVCWEB.Migrations
                             ImageUrl = "/images/2.jpg",
                             Price = 12000m,
                             ProductName = "Computer",
+                            Showcase = false,
                             Summary = "",
                             categoryId = 1
                         },
@@ -151,6 +155,7 @@ namespace MVCWEB.Migrations
                             ImageUrl = "/images/2.jpg",
                             Price = 1000m,
                             ProductName = "Keyboard",
+                            Showcase = false,
                             Summary = "",
                             categoryId = 1
                         },
@@ -160,6 +165,7 @@ namespace MVCWEB.Migrations
                             ImageUrl = "/images/3.jpg",
                             Price = 2000m,
                             ProductName = "Mouse",
+                            Showcase = false,
                             Summary = "",
                             categoryId = 1
                         },
@@ -169,8 +175,29 @@ namespace MVCWEB.Migrations
                             ImageUrl = "/images/4.jpg",
                             Price = 4000m,
                             ProductName = "Monitor",
+                            Showcase = false,
                             Summary = "",
                             categoryId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ImageUrl = "/images/1.jpg",
+                            Price = 15000m,
+                            ProductName = "Phone",
+                            Showcase = true,
+                            Summary = "",
+                            categoryId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ImageUrl = "/images/1.jpg",
+                            Price = 40000m,
+                            ProductName = "Macbook",
+                            Showcase = true,
+                            Summary = "",
+                            categoryId = 2
                         });
                 });
 

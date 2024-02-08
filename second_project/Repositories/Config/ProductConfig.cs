@@ -12,11 +12,13 @@ public class ProductConfig : IEntityTypeConfiguration<Product>
         builder.Property(p => p.ProductName).IsRequired();
         builder.Property(p => p.Price).IsRequired();
         
-        builder.HasData(
-            new Product() { Id = 1, ProductName = "Computer",ImageUrl = "/images/2.jpg",categoryId = 1, Price = 12000 },
-            new Product() { Id = 2, ProductName = "Keyboard", ImageUrl = "/images/2.jpg",categoryId = 1, Price = 1000 },
-            new Product() { Id = 3, ProductName = "Mouse", ImageUrl = "/images/3.jpg",categoryId = 1, Price = 2000 },
-            new Product() { Id = 4, ProductName = "Monitor", ImageUrl = "/images/4.jpg",categoryId = 1, Price = 4000 }
+        builder.HasData(    // showcase vermezsek auto false verir
+            new Product() { Id = 1, ProductName = "Computer",ImageUrl = "/images/2.jpg",categoryId = 1, Price = 12000 ,Showcase = false},
+            new Product() { Id = 2, ProductName = "Keyboard", ImageUrl = "/images/2.jpg",categoryId = 1, Price = 1000 ,Showcase = false},
+            new Product() { Id = 3, ProductName = "Mouse", ImageUrl = "/images/3.jpg",categoryId = 1, Price = 2000 ,Showcase = false},
+            new Product() { Id = 4, ProductName = "Monitor", ImageUrl = "/images/4.jpg",categoryId = 1, Price = 4000 ,Showcase = false},
+            new Product() { Id = 5, ProductName = "Phone", ImageUrl = "/images/1.jpg",categoryId = 2, Price = 15000 ,Showcase = true},
+            new Product() { Id = 6, ProductName = "Macbook", ImageUrl = "/images/1.jpg",categoryId = 2, Price = 40000,Showcase = true}
         );
     }
 }
