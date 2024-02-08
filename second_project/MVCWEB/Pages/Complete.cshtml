@@ -1,0 +1,23 @@
+@page "success"
+
+@if (OrderId is null)
+{
+    <div class="text-md-center text-danger">
+        You have no access
+    </div>
+}
+else
+{
+    <div class="text-md-center">
+        <h6 class="display-6">Thanks for your order</h6>
+        <p>Your order id #@OrderId</p>
+        <br/>
+        <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index">Go Home</a>
+    </div>
+}
+
+@functions
+{
+    [BindProperty(SupportsGet = true)]
+    public string? OrderId { get; set; }
+}

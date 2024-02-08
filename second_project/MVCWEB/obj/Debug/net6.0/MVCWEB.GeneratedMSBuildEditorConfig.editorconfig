@@ -54,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Pages/Complete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tcGxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/Views/Product/Get.cshtml]

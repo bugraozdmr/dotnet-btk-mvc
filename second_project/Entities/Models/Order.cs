@@ -12,9 +12,9 @@ public class Order
     public string? Name { get; set; }
     
     [Required(ErrorMessage = "Line is required")]
-    public string? Line { get; set; }
-    public string? Line { get; set; }
-    public string? Line { get; set; }
+    public string? Line1 { get; set; }
+    public string? Line2 { get; set; }
+    public string? Line3 { get; set; }
     public string? City { get; set; }
     public bool GiftWrap { get; set; }
     public bool Shipped { get; set; }

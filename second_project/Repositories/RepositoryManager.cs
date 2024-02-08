@@ -10,11 +10,14 @@ public class RepositoryManager : IRepositoryManager
     private readonly ICategoryRepository _categoryRepository;
     private readonly IOrderRepository _orderRepository;
 
-    public RepositoryManager(ICategoryRepository categoryRepository,IProductRepository productRepository, RepositoryContext context)
+    public RepositoryManager(ICategoryRepository categoryRepository
+        ,IProductRepository productRepository
+        , RepositoryContext context, IOrderRepository orderRepository)
     {
         _categoryRepository = categoryRepository;
         _productRepository = productRepository;
         _context = context;
+        _orderRepository = orderRepository;
     }
 
     public IProductRepository Product => _productRepository;

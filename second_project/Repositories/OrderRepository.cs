@@ -40,6 +40,8 @@ public class OrderRepository : RepositoryBase<Order>, IOrderRepository
         {
             _context.Orders.Add(order);
         }
+        
+        _context.SaveChanges();
     }
 
     public int NumberOfInProcess => _context.Orders.Count(o => o.Shipped.Equals(false));
