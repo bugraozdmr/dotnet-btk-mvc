@@ -24,6 +24,14 @@ public class ProductManager : IProductService
         return products;
     }
 
+    public IEnumerable<Product> getLatestProducts(int? n, bool trackChanges)
+    {
+        int number = n ?? 5;
+        return _manager.Product.FindAll(false)
+            .OrderByDescending(prd => prd.Id)
+            .Take(number);
+    }
+
     public IEnumerable<Product> GetShowcaseProducts(bool trackChanges)
     {
         return _manager.Product.GetShowcaseProducts(trackChanges);

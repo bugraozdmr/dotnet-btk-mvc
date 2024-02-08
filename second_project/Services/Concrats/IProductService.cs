@@ -7,6 +7,7 @@ namespace Services.Concrats;
 public interface IProductService
 {
     IEnumerable<Product> GetAllProducts(bool trackChanges);
+    IEnumerable<Product> getLatestProducts(int? n,bool trackChanges);
     IEnumerable<Product> GetShowcaseProducts(bool trackChanges);
     IEnumerable<Product> GetAllProductsWithDetails(ProductRequestParameters parameters);
     Product? GetOneProduct(int id,bool trackChanges);
