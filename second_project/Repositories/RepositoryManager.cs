@@ -10,6 +10,7 @@ public class RepositoryManager : IRepositoryManager
     private readonly ICategoryRepository _categoryRepository;
     private readonly IOrderRepository _orderRepository;
 
+    // bunlar kesinlikle constructorda geçilmeliler
     public RepositoryManager(ICategoryRepository categoryRepository
         ,IProductRepository productRepository
         , RepositoryContext context, IOrderRepository orderRepository)
