@@ -29,7 +29,8 @@ public sealed class ProductRepository : RepositoryBase<Product> , IProductReposi
             .Products
             .FilteredByCategoryId(parameters.CategoryId)
             .FilteredBySearchTerm(parameters.SearchTerm)
-            .FilterByPrice(parameters.MinPrice,parameters.MaxPrice,parameters.IsValidPrice);
+            .FilterByPrice(parameters.MinPrice, parameters.MaxPrice, parameters.IsValidPrice)
+            .ToPaginate(parameters.PageNumber, parameters.Pagesize);
     }
 
     public Product GetOneProduct(int id, bool trackChanges) => FindByCondition(

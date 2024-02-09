@@ -32,4 +32,12 @@ public static class ProductRepositoryExtension
 
         return products;
     } 
+    
+    public static IQueryable<Product> ToPaginate(this IQueryable<Product> products,
+        int pageNumber,int Pagesize)
+    {
+        return products
+            .Skip((pageNumber - 1) * Pagesize)
+            .Take(Pagesize);
+    } 
 }

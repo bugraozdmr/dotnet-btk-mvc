@@ -10,21 +10,23 @@
         <div class="text-center">
             <h6 class="display-6">@Model.ProductName</h6>
         </div>
-        <img class="img-fluid shadow rounded-3 my-3" src="@Model.ImageUrl" alt="@Model.ProductName" width="100%" height="auto"/>
+        <img class="img-fluid shadow rounded-3 my-3 p-5" src="@Model.ImageUrl" alt="@Model.ProductName" width="100%" height="auto"/>
         <div class="text-center">
             <h4 class="lead text-warning">@Model.Price.ToString("C")</h4>
             <br/>
-            <a class="btn btn-outline-dark" asp-action="Index" asp-controller="Product">Home</a>
-            <br/>
-            <form id="@Model.Id" method="post" asp-page="/cart">
-                <input type="hidden" asp-for="Id"/>
-                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
-                <button type="submit" class="btn btn-outline-dark">
-                    <i class="fa fa-cart-plus"></i>
-                </button>
-            </form>
+            <div class="btn-group">
+                <a class="btn btn-outline-dark" asp-action="Index" asp-controller="Product">Home</a>
 
-            <a class="btn btn-outline-dark" href="/product">products</a>
+                <form id="@Model.Id" method="post" asp-page="/cart">
+                    <input type="hidden" asp-for="Id"/>
+                    <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+                    <button type="submit" class="btn btn-outline-dark">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </form>
+
+                <a class="btn btn-outline-dark" href="/product">products</a>
+            </div>
         </div>
         
         

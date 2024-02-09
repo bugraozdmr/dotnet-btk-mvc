@@ -1,4 +1,4 @@
-@model IEnumerable<Product>
+@model ProductListViewModel
 
 @{
     ViewData["Title"] = "Products";
@@ -13,9 +13,9 @@
     </div>
     <div class="col-md-9">
         <div class="row my-3">
-            @if (!Model.Count().Equals(0))
+            @if (!Model.Products.Count().Equals(0))
             {
-                @foreach (var item in @Model)
+                @foreach (var item in @Model.Products)
                 {
                     // bu iyice bilgi
                     <partial name="_ProductCard" model="@item"/>
@@ -29,6 +29,18 @@
             }
             
         </div>
+        @if (!Model.Products.Count().Equals(0))
+        {
+            <div>
+                <div page-model="@Model.Pagination" page-action="Index"
+                     page-class="btn"
+                     page-class-normal="btn-outline-dark"
+                     page-class-selected="btn-primary"
+                     page-classes-enabled="true"
+                     class="btn group">
+                </div>
+            </div>
+        }
     </div>
 </div>
 
