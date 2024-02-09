@@ -1,0 +1,60 @@
+@model LoginModel
+
+<div class="container my-4">
+
+  <h4 class="display-6 text-center">
+    <i class="fas fa-sign-in text-white bg-secondary rounded-3"></i>
+    <br>
+    Login
+  </h4>
+  <!-- Pills content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      <div class="text-danger" style="list-style: none" asp-validation-summary="All"></div>
+      
+      <form method="post" asp-action="Login">
+        <!-- Email input -->
+        
+        
+        <!-- ekle kalsın boş gelmesin diye modele atama yap -- bu yontem iyi ---> 
+        <input type="hidden" asp-for="ReturnUrl"/>
+        
+        
+        <div class="form-outline mb-4">
+          <label class="form-label">Username</label>
+          <input type="text" asp-for="Username" class="form-control"/>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label">Password</label>
+          <input type="password" asp-for="Password" class="form-control"/>
+        </div>
+
+        <!-- 2 column grid layout -->
+        <!--<div class="row mb-4">
+          <div class="col-md-6 d-flex justify-content-center">
+              
+            <div class="form-check mb-3 mb-md-0">
+              <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+              <label class="form-check-label" for="loginCheck"> Remember me </label>
+            </div>
+          </div>
+    
+          <div class="col-md-6 d-flex justify-content-center">
+              
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>-->
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a asp-action="Register">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

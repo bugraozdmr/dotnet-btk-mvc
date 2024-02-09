@@ -1,4 +1,6 @@
+using Entities.Models;
 using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 
@@ -32,4 +34,51 @@ public static class ApplicationExtension
                 .SetDefaultCulture("tr-TR");
         });
     }
+
+    public static async void ConfigureDefaultAdminUser(this IApplicationBuilder app)
+    {
+        const string adminUser = "Admin";
+        const string adminPassword = "Admin+123456";
+        
+        // User Manager
+        UserManager<User> userManager = app
+            .ApplicationServices
+            .CreateScope()
+            .ServiceProvider
+            .GetService<UserManager<User>>();
+        
+        // Role Manager -- admine tüm rolleri vermek istiyor
+        RoleManager<IdentityRole> roleManager = app
+            .ApplicationServices
+            .CreateAsyncScope()
+            .ServiceProvider
+            .GetRequiredService<RoleManager<IdentityRole>>();
+
+        User user = await userManager.FindByNameAsync(adminUser);
+        if (user is null)
+        {
+            user = new User()
+            {
+                FirstName = "Grant",
+                LastName = "Wick",
+                Email = "bugra.ozdemir@gmail.com",
+                PhoneNumber = "5061024511",
+                UserName = adminUser
+            };
+
+            var result = await userManager.CreateAsync(user, adminPassword);
+            if (!result.Succeeded)
+                throw new Exception("Admin could not created.");
+
+            // tüm rolleri admin aldı
+            var roleResult = await userManager.AddToRolesAsync(user,
+                roleManager
+                    .Roles
+                    .Select(r => r.Name)
+                    .ToList());
+
+            if (!roleResult.Succeeded)
+                throw new Exception("System have problems with role defination for admin.");
+        }
+    } 
 }

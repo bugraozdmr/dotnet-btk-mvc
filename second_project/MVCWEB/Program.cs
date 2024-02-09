@@ -11,6 +11,8 @@ builder.Services.AddRazorPages();
 
 // extensionsdan geldi
 builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity();
+
 builder.Services.ConfigureSession();
 
 
@@ -43,6 +45,8 @@ app.UseSession();
 
 app.UseRouting();
 
+// bu ikisi şart -- routing ile endpointler arasında olmak zorunda
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
@@ -61,5 +65,6 @@ app.UseEndpoints(endpoints =>
 
 app.ConfigureAndCheckMigration();
 app.ConfigureLocalization();
+app.ConfigureDefaultAdminUser();
 
 app.Run();

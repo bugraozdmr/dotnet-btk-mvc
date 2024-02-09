@@ -1,8 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "Qifz/VjMzohJ1gZDL7mbc2y/m2HnMTDlGQCKcMGnX4T0Y+9hyEm0samRS2NDZaXhcboWSV7CvqQCdNGWw3su7A==",
+  "dgSpecHash": "ceCstU3gyYR12g2AAgA7h40Oc4t7UzpqOlc4UlQe5tyYMNZGf29LPBufStcl2G3zcuEl6VNw9bHRDsdFkp1U0g==",
   "success": true,
   "projectFilePath": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/Entities/Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/bugra/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.25/microsoft.aspnetcore.cryptography.internal.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.25/microsoft.aspnetcore.cryptography.keyderivation.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/6.0.25/microsoft.aspnetcore.identity.entityframeworkcore.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore/6.0.25/microsoft.entityframeworkcore.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.25/microsoft.entityframeworkcore.abstractions.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.25/microsoft.entityframeworkcore.analyzers.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.25/microsoft.entityframeworkcore.relational.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.1/microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.identity.core/6.0.25/microsoft.extensions.identity.core.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.identity.stores/6.0.25/microsoft.extensions.identity.stores.6.0.25.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

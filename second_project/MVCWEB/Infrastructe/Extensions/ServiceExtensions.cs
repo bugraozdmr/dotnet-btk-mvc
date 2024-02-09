@@ -1,4 +1,5 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MVCWEB.Models;
 using Repositories;
@@ -16,9 +17,29 @@ public static class ServiceExtensions
         var connectionString = configuration.GetConnectionString("sqlConnection");
 
         services.AddDbContextPool<RepositoryContext>(opt =>
-            opt.UseMySql(connectionString, new MySqlServerVersion(new Version(10, 4, 28))));
+        {
+            opt.UseMySql(connectionString, new MySqlServerVersion(new Version(10, 4, 28)));
+            // geliştirmede bu olabilir
+            opt.EnableSensitiveDataLogging(true);
+        });
     }
 
+    public static void ConfigureIdentity(this IServiceCollection services)
+    {
+        services.AddIdentity<User, IdentityRole>(options =>
+        {
+            options.SignIn.RequireConfirmedAccount = false;
+            options.User.RequireUniqueEmail = true;
+            options.Password.RequiredLength = 6;
+            options.Password.RequireDigit = true;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireLowercase = true;
+            options.Password.RequireNonAlphanumeric = false;
+        })
+        .AddEntityFrameworkStores<RepositoryContext>()
+        .AddDefaultTokenProviders();
+    }
+    
     public static void ConfigureSession(this IServiceCollection services)
     {
         // oturum yönetimi
