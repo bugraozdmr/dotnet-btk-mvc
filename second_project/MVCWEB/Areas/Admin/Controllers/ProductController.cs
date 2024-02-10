@@ -1,11 +1,13 @@
 using Entities.Dtos;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Services.Concrats;
 
 namespace MVCWEB.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
 public class ProductController : Controller
 {
     private readonly IServiceManager _manager;

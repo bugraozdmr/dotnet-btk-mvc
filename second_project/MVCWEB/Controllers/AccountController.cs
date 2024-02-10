@@ -1,5 +1,6 @@
 using Entities.Dtos;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MVCWEB.Models;
@@ -101,5 +102,10 @@ public class AccountController : Controller
         }
         
         return View(model);
+    }
+
+    public IActionResult AccessDenied([FromRoute] string returnUrl)
+    {
+        return View(returnUrl);
     }
 }

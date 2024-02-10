@@ -108,3 +108,8 @@
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
 /Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Presentation.dll
+/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/bin/Debug/net6.0/Presentation.pdb

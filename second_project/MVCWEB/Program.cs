@@ -1,10 +1,12 @@
 
 using MVCWEB.Infrastructe.Extensions;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//api desteği geldi controllers ile -- presentation kaydı
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
@@ -23,6 +25,10 @@ builder.Services.ConfigureRouting();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.ConfigureApplicationCookie();
+
+// adding HttpClient -- api bilgi çekme
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
@@ -60,6 +66,9 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute("default","{controller=Home}/{action=Index}/{id?}");
 
     endpoints.MapRazorPages();
+
+    // api desteği aldı
+    endpoints.MapControllers();
 });
 
 

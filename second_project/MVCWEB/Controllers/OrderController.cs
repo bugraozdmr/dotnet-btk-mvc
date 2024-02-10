@@ -1,4 +1,5 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Concrats;
 
@@ -16,6 +17,7 @@ public class OrderController : Controller
     }
 
     // burası IActionResult'da olurdu -- artık viewler hata almasın diye böyle başta oluştur gönder
+    [Authorize] //login olması yeter
     public ViewResult Checkout() => View(new Order());
 
     [HttpPost]

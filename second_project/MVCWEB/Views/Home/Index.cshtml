@@ -1,5 +1,15 @@
-﻿@{
+﻿@model IEnumerable<Product>
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
+<div class="text-center display-6 my-2">Deneme amaçlı</div>
+<ul class="list-group my-3 border  text-center">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">(@item.ProductName)-(@item.categoryId)-(@item.Price.ToString("C2"))</li>
+    }
+</ul>
 
 @await Component.InvokeAsync("Showcase")

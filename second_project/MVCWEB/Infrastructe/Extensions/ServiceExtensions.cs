@@ -1,4 +1,5 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MVCWEB.Models;
@@ -71,8 +72,22 @@ public static class ServiceExtensions
         services.AddScoped<ICategoryService, CategoryManager>();
         services.AddScoped<IProductService, ProductManager>();
         services.AddScoped<IOrderService, OrderManager>();
+        services.AddScoped<IAuthService, AuthManager>();
     }
 
+
+    public static void ConfigureApplicationCookie(this IServiceCollection services)
+    {
+        services.ConfigureApplicationCookie(opt =>
+        {
+            opt.LoginPath = new PathString("/Account/Login");
+            opt.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+            opt.ExpireTimeSpan = TimeSpan.FromMinutes(10);      // 10dk sonra yeniden girmeni istiyor
+            opt.AccessDeniedPath = new PathString("/Account/AccessDenied");
+        });
+    }
+    
+    
     public static void ConfigureRouting(this IServiceCollection services)
     {
         // artık urlde büyük harf almıyor otomatik küçültüyor -- artık sona / geliyor true olursa
