@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qWGR6f3eabYiT5qycwpTC3JL4OjJB4ftjjQCD7paoT8=",
+  "Hash": "lJP87ZqZ5wIRWdg8x/yn+2ZvYV3C47IsqhOgyNoKRz8=",
   "Source": "MVCWEB",
   "BasePath": "_content/MVCWEB",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/4.jpg"
+    },
+    {
+      "Identity": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/elma.jpg",
+      "SourceId": "MVCWEB",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/",
+      "BasePath": "_content/MVCWEB",
+      "RelativePath": "images/elma.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/elma.jpg"
     },
     {
       "Identity": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/sagomi.png",

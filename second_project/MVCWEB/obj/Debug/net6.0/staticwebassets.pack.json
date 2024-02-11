@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets/images/4.jpg"
     },
     {
+      "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/elma.jpg",
+      "PackagePath": "staticwebassets/images/elma.jpg"
+    },
+    {
       "Id": "/Users/bugra/Desktop/dotnet-btk-mvc-first/second_project/MVCWEB/wwwroot/images/sagomi.png",
       "PackagePath": "staticwebassets/images/sagomi.png"
     },

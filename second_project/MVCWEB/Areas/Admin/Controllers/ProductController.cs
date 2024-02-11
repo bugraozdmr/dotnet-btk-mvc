@@ -1,8 +1,10 @@
 using Entities.Dtos;
 using Entities.Models;
+using Entities.RequestParameters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using MVCWEB.Models;
 using Services.Concrats;
 
 namespace MVCWEB.Areas.Admin.Controllers;
@@ -17,23 +19,33 @@ public class ProductController : Controller
         _manager = manager;
     }
 
-    public IActionResult Index()
+    public IActionResult Index([FromQuery]ProductRequestParameters p)
     {
-        var model = _manager.ProductService.GetAllProducts(false);
-        return View(model);
+        // illa sayfada olmasına gerek yok böylede olabilir
+        ViewData["Title"] = "Products";
+        
+        var products = _manager.ProductService.GetAllProductsWithDetails(p);
+        var pagination = new Pagination()
+        {
+            CurrentPage = p.PageNumber,
+            ItemsPerPage = p.Pagesize,
+            TotalItems = _manager.ProductService.GetAllProducts(false).Count()
+        };
+
+        return View(new ProductListViewModel()
+        {
+            Products = products,
+            Pagination = pagination
+        });
+        
     }
 
     public IActionResult Create()
     {
         // select list
         ViewBag.Categories = getCategoriesSelectList();
+        
         return View();
-    }
-
-    private SelectList getCategoriesSelectList()
-    {
-        return new SelectList(_manager.CategoryService.GetAllCategories(false)
-            , "CategoryId", "CategoryName", "1");
     }
     
     [HttpPost]
@@ -58,7 +70,8 @@ public class ProductController : Controller
             productDto.ImageUrl = String.Concat("/images/", file.FileName);
             
             _manager.ProductService.CreateProduct(productDto);
-        
+
+            TempData["success"] = $"{productDto.ProductName} has been created.";
             return RedirectToAction("Index");    
         }
         
@@ -66,6 +79,13 @@ public class ProductController : Controller
         return View(productDto);
     }
 
+    
+    private SelectList getCategoriesSelectList()
+    {
+        return new SelectList(_manager.CategoryService.GetAllCategories(false)
+            , "CategoryId", "CategoryName", "1");
+    }
+    
     public IActionResult Update([FromRoute(Name = "id")]int id)
     {
         ViewBag.Categories = getCategoriesSelectList();
@@ -104,6 +124,7 @@ public class ProductController : Controller
     public IActionResult Delete([FromRoute(Name = "id")]int id)
     {
         _manager.ProductService.DeleteProduct(id);
+        TempData["danger"] = $"Product has removed.";
         return RedirectToAction("Index");
     }
     

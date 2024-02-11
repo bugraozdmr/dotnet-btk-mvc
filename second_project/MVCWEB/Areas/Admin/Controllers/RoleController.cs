@@ -17,6 +17,7 @@ public class RoleController : Controller
 
     public IActionResult Index()
     {
+        ViewData["Title"] = "Roles";
         return View(_serviceManager.AuthService.Roles);
     }
 }
