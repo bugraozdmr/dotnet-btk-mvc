@@ -1,15 +1,32 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{A5DD0FB3-CD77-413C-938A-A87488A51534}|https">
+  <MonoDevelop.Ide.ItemProperties.Mvc.Mvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="second_project/MVCWEB/appsettings.json">
+    <Files>
+      <File FileName="second_project/Repositories/RepositoryContext.cs" Line="25" Column="15" />
+      <File FileName="second_project/MVCWEB/Program.cs" Line="15" Column="27" />
+      <File FileName="second_project/MVCWEB/Infrastructe/Extensions/ServiceExtensions.cs" Line="41" Column="37" />
+      <File FileName="second_project/MVCWEB/appsettings.json" Line="9" Column="3" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="dotnek-btk-mvc-first" selected="True" />
+          <Node name="dotnek-btk-mvc-first" expanded="True">
+            <Node name="MVC_sec" expanded="True">
+              <Node name="MVCWEB" expanded="True">
+                <Node name="Infrastructe" expanded="True">
+                  <Node name="Extensions" expanded="True" />
+                </Node>
+                <Node name="appsettings.json" selected="True" />
+              </Node>
+              <Node name="Repositories" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

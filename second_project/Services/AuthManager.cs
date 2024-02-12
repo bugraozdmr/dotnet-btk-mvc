@@ -94,10 +94,15 @@ public class AuthManager : IAuthService
 
     public async Task Update(UserDtoForUpdate userDto)
     {
+        // username değişirse çalışamaz ... -- id ile çekmeyi denersen sorun olmayacaktır ama şuan değişmicem
         var user = await GetOneUser(userDto.Username);
 
         user.PhoneNumber = userDto.PhoneNumber;
         user.Email = userDto.Email;
+        user.FirstName = userDto.FirstName;
+        user.LastName = userDto.LastName;
+        user.UserName = userDto.Username;
+        
 
         var result = await _userManager.UpdateAsync(user);
             
